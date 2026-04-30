@@ -33,8 +33,6 @@ public:
                 list2 = list2->next;
             }
 
-            std::cout << i1 << ", " << i2 << std::endl;
-
             if(head == nullptr)
             {
                 head = t;

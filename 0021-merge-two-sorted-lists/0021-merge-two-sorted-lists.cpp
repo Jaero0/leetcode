@@ -17,19 +17,19 @@ public:
 
         while(list1 != nullptr || list2 != nullptr)
         {
-            ListNode* t = new ListNode();
+            ListNode* t;
 
             int i1 = list1 == nullptr ? 101 : list1->val;
             int i2 = list2 == nullptr ? 101 : list2->val;
 
             if(i1 < i2)
             {
-                t->val = i1;
+                t = list1;
                 list1 = list1->next;
             }
             else
             {
-                t->val = i2;
+                t = list2;
                 list2 = list2->next;
             }
 

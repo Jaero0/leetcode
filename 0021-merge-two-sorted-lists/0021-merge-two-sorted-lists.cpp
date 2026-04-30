@@ -17,7 +17,7 @@ public:
 
         while(list1 != nullptr || list2 != nullptr)
         {
-            ListNode* t;
+            ListNode* t = new ListNode();
 
             int i1 = list1 == nullptr ? 101 : list1->val;
             int i2 = list2 == nullptr ? 101 : list2->val;

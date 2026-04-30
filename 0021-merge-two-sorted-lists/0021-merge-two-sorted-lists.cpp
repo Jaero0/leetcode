@@ -13,12 +13,11 @@ public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         
         ListNode* head = nullptr;
-        ListNode* last = head;
+        ListNode* last = nullptr;
 
         while(list1 != nullptr || list2 != nullptr)
         {
             ListNode* t = new ListNode();
-            
 
             int i1 = list1 == nullptr ? 101 : list1->val;
             int i2 = list2 == nullptr ? 101 : list2->val;

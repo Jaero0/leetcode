@@ -16,12 +16,26 @@ public:
                 f += c;
             }
         }
+        
+        bool isSame = true;
 
-        if(f.size() == 0) return true;
+        int l = 0;
+        int r = f.size() - 1;
+        while(l < r)
+        {
+            char c1 = f[l];
+            char c2 = f[r];
 
-        string fv = f;
-        std::reverse(fv.begin(), fv.end());
+            if (c1 != c2)
+            {
+                isSame = false;
+                break;
+            }
 
-        return fv == f ? true : false;
+            l++;
+            r--;
+        }
+
+        return isSame;
     }
 };

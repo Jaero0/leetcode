@@ -8,8 +8,9 @@ public:
 
         for(int i = 0; i < s; i++)
         {
-            minP = std::min(minP, prices[i]);
-            max = std::max(max, prices[i] - minP);
+            int p = prices[i];
+            minP = std::min(minP, p);
+            max = std::max(max, p - minP);
         }
 
         return max;

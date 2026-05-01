@@ -13,14 +13,7 @@ class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) 
     {
-        conq(root);
-
-        return root;
-    }
-
-    void conq(TreeNode* root)
-    {
-        if(!root) return;
+        if(!root) return nullptr;
 
         auto l = root -> left ? root -> left : nullptr;
         auto r = root -> right ? root -> right : nullptr;
@@ -28,7 +21,9 @@ public:
         root -> left = r;
         root -> right = l;
 
-        conq(l);
-        conq(r);
+        invertTree(l);
+        invertTree(r);
+
+        return root;
     }
 };

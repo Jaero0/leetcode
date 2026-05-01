@@ -2,7 +2,7 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
 
-        if(s.size() != t.size()) return false;
+        //if(s.size() != t.size()) return false;
 
         map<char, int> m;
 

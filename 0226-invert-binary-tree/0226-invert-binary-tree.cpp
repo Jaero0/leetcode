@@ -13,26 +13,22 @@ class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) 
     {
-        TreeNode* head = root;
-        TreeNode* last = head;
+        conq(root);
 
-        conq(root, last);
-
-        return head;
+        return root;
     }
 
-    void conq(TreeNode* root, TreeNode* last)
+    void conq(TreeNode* root)
     {
         if(!root) return;
 
         auto l = root -> left ? root -> left : nullptr;
         auto r = root -> right ? root -> right : nullptr;
 
-        last -> left = r;
-        last -> right = l;
-        last = l;
-        conq(l, last);
-        last = r;
-        conq(r, last);
+        root -> left = r;
+        root -> right = l;
+
+        conq(l);
+        conq(r);
     }
 };

@@ -2,19 +2,19 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
 
-        //if(s.size() != t.size()) return false;
+        if(s.size() != t.size()) return false;
 
-        map<char, int> m;
+        int m[27];
 
         for(int i = 0; i < s.size(); i++)
         {
-            m[s[i]] += 1;
-            m[t[i]] -= 1;
+            m[s[i] - 'a'] += 1;
+            m[t[i] - 'a'] -= 1;
         }
 
-        for(pair<char, int> p : m)
+        for(int i = 1; i < 27; i++)
         {
-            if(p.second != 0) return false;
+            if(m[i] != 0) return false;
         }
 
         return true;

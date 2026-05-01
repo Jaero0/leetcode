@@ -1,16 +1,15 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+
+        if(s.size() != t.size()) return false;
+
         map<char, int> m;
 
-        for(char c : s)
+        for(int i = 0; i < s.size(); i++)
         {
-            m[c] += 1;
-        }
-
-        for(char c : t)
-        {
-            m[c] -= 1;
+            m[s[i]] += 1;
+            m[t[i]] -= 1;
         }
 
         for(pair<char, int> p : m)

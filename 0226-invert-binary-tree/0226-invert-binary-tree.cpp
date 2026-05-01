@@ -13,16 +13,25 @@ class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) 
     {
-        if(!root) return nullptr;
+        std::queue<TreeNode*> q;
+        q.push(root);
 
-        auto l = root -> left ? root -> left : nullptr;
-        auto r = root -> right ? root -> right : nullptr;
+        while(q.size() > 0)
+        {
+            TreeNode* root = q.front();
+            q.pop();
 
-        root -> left = r;
-        root -> right = l;
+            if(!root) continue;
 
-        invertTree(l);
-        invertTree(r);
+            auto l = root -> left ? root -> left : nullptr;
+            auto r = root -> right ? root -> right : nullptr;
+
+            root -> left = r;
+            root -> right = l;
+
+            q.push(l);
+            q.push(r);
+        }
 
         return root;
     }

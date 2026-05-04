@@ -4,7 +4,6 @@ public:
         
         int size = nums.size();
         int i = size/2;
-        int max = size;
 
         int count = 0;
         while(true)
@@ -13,12 +12,12 @@ public:
 
             if(t > target)
             {
-                max = i;
+                size = i;
                 i /= 2;
             }
             else if(t < target)
             {
-                i = (i + max) / 2;
+                i = (i + size) / 2;
             }
             else
             {
@@ -31,7 +30,6 @@ public:
             {
                 return -1;
             }
-            
         }
     }
 };

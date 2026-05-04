@@ -1,36 +1,23 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        
-        int size = nums.size();
-        int i = size/2;
-        int max = size;
+        int left = 0;
+        int right = nums.size() - 1;
 
-        int count = 0;
-        while(true)
-        {
-            int t = nums[i];
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
 
-            if(t > target)
-            {
-                max = i;
-                i /= 2;
+            if (nums[mid] == target) {
+                return mid;
             }
-            else if(t < target)
-            {
-                i = (i + max) / 2;
+            else if (nums[mid] < target) {
+                left = mid + 1;
             }
-            else
-            {
-                return i;
-            }
-            
-            count++;
-
-            if(count > size)
-            {
-                return -1;
+            else {
+                right = mid - 1;
             }
         }
+
+        return -1;
     }
 };

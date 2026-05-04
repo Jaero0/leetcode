@@ -5,15 +5,15 @@ public:
 
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
 
+        if(image[sr][sc] == color) return image;
+
         int maxX = image.size();
         int maxY = image[0].size();
 
-        bool visited[51][51] = {false};
         std::queue<pair<int,int>> q;
         int startColor = image[sr][sc];
 
         q.push(make_pair(sr,sc));
-        visited[sr][sc] = true;
 
         while(q.size() > 0)
         {
@@ -31,10 +31,8 @@ public:
 
                 if (mx < 0 || mx >= maxX || 
                 my < 0 || my >= maxY || 
-                visited[mx][my] == true || 
                 image[mx][my] != startColor) continue;
 
-                visited[mx][my] = true;
                 q.push(make_pair(mx,my));
             }
         }

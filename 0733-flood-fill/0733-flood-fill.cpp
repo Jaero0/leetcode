@@ -29,9 +29,10 @@ public:
                 int mx = x + moveX[i];
                 int my = y + moveY[i];
 
-                if (mx < 0 || mx >= maxX || my < 0 || my >= maxY) continue;
-                if (visited[mx][my] == true) continue;
-                if (image[mx][my] != startColor) continue;
+                if (mx < 0 || mx >= maxX || 
+                my < 0 || my >= maxY || 
+                visited[mx][my] == true || 
+                image[mx][my] != startColor) continue;
 
                 visited[mx][my] = true;
                 q.push(make_pair(mx,my));

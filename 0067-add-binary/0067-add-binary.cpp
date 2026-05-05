@@ -5,26 +5,8 @@ public:
         int bl = b.size() - 1;
         int al = a.size() - 1;
 
-        if(bl > al)
-        {
-            for(int i = 0; i <= bl; i++)
-            {
-                if(i > al)
-                {
-                    a = "0" + a;
-                }
-            }
-        }
-        else
-        {
-            for(int i = 0; i <= al; i++)
-            {
-                if(i > bl)
-                {
-                    b = "0" + b;
-                }
-            }
-        }
+        while(a.size() < b.size()) a = '0' + a;
+        while(b.size() < a.size()) b = '0' + b;
 
 
         string s = "";

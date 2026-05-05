@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-
+    const int FAKE = -1000000;
     int height(TreeNode* node) {
 
         if (node == nullptr) {
@@ -20,24 +20,24 @@ public:
 
         int left = height(node->left);
 
-        if (left == -1) {
-            return -1;
+        if (left == FAKE) {
+            return FAKE;
         }
 
         int right = height(node->right);
 
-        if (right == -1) {
-            return -1;
+        if (right == FAKE) {
+            return FAKE;
         }
 
         if (abs(left - right) > 1) {
-            return -1;
+            return FAKE;
         }
 
         return max(left, right) + 1;
     }
 
     bool isBalanced(TreeNode* root) {
-        return height(root) != -1;
+        return height(root) != FAKE;
     }
 };

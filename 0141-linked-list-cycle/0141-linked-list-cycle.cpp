@@ -5,7 +5,7 @@ public:
         if(!head) return false;
         
         ListNode* n = head;
-        ListNode* nn = head ? head->next : nullptr;
+        ListNode* nn = head->next;
 
         bool isFound = false;
 

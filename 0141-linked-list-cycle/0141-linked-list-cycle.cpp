@@ -7,33 +7,16 @@ public:
         ListNode* n = head;
         ListNode* nn = head->next;
 
-        bool isFound = false;
-
-        while(true)
+        while(nn && nn->next)
         {
-            if(n == nn)
-            {
-                isFound = true;
-                break;
-            }
+            if(n == nn) return true;
 
             n = n->next;
+            nn = nn->next->next;
 
-            if(nn && nn->next)
-            {
-                nn = nn->next;
-
-                if(nn->next)
-                {
-                    nn = nn->next;
-                }
-            }
-            else
-            {
-                break;
-            }
+            if(!nn) return false;
         }
 
-        return isFound;
+        return false;
     }
 };

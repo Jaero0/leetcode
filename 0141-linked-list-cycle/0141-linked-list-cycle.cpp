@@ -1,9 +1,11 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
+
+        if(!head) return false;
         
         ListNode* n = head;
-        ListNode* nn = head->next;
+        ListNode* nn = head ? head->next : nullptr;
 
         bool isFound = false;
 

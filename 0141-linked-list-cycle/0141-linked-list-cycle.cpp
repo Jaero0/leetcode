@@ -2,22 +2,34 @@ class Solution {
 public:
     bool hasCycle(ListNode *head) {
         
-        set<ListNode*> set;
-
         ListNode* n = head;
+        ListNode* nn = head->next;
 
         bool isFound = false;
 
-        while(n)
+        while(true)
         {
-            if(set.contains(n))
+            if(n == nn)
             {
                 isFound = true;
                 break;
             }
 
-            set.insert(n);
             n = n->next;
+
+            if(nn && nn->next)
+            {
+                nn = nn->next;
+
+                if(nn->next)
+                {
+                    nn = nn->next;
+                }
+            }
+            else
+            {
+                break;
+            }
         }
 
         return isFound;

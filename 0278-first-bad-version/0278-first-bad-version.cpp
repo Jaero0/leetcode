@@ -6,12 +6,12 @@ public:
 
     int firstBadVersion(int n) {
 
-        long l = 1;
-        long mid = 0;
+        int l = 1;
+        int mid = 0;
         
         while(l <= n)
         {
-            mid = (l + n) / 2;
+            mid = l + (n - l) / 2;
 
             if(isBadVersion(mid))
             {

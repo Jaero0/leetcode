@@ -2,24 +2,23 @@ class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         
-        queue<char> q;
-
-        sort(ransomNote.begin(), ransomNote.end());
-        sort(magazine.begin(), magazine.end());
+        int alpha[26];
 
         for(char c : ransomNote)
         {
-            q.push(c);
+            alpha[c - 'a']++;
         }
 
         for(char c : magazine)
         {
-            if(q.front() == c)
-            {
-                q.pop();
-            }
+            alpha[c - 'a']--;
         }
 
-        return q.empty();
+        for(int i : alpha)
+        {
+            if(i > 0) return false;
+        }
+
+        return true;
     }
 };

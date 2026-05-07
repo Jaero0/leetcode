@@ -2,7 +2,7 @@ class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         
-        int alpha[26];
+        short alpha[26];
 
         for(char c : ransomNote)
         {

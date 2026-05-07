@@ -1,22 +1,15 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        
+
         short alpha[26];
 
-        for(char c : ransomNote)
-        {
+        for (char c : magazine)
             alpha[c - 'a']++;
-        }
 
-        for(char c : magazine)
-        {
-            alpha[c - 'a']--;
-        }
-
-        for(int i : alpha)
-        {
-            if(i > 0) return false;
+        for (char c : ransomNote) {
+            if (--alpha[c - 'a'] < 0)
+                return false;
         }
 
         return true;

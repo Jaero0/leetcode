@@ -23,7 +23,8 @@ public:
         }
 
         
-        ListNode* h = new ListNode();
+        ListNode* h = st.top();
+        st.pop();
         ListNode* tail = h;
 
         while(!st.empty())
@@ -35,6 +36,6 @@ public:
 
         tail->next = nullptr;
 
-        return h->next;
+        return h;
     }
 };

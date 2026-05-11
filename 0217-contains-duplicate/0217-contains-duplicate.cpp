@@ -6,9 +6,9 @@ public:
 
         for(int i : nums)
         {
-            if(m[i] > 0) return true;
+            if(m[i] == 1) return true;
 
-            m[i] += 1;
+            m[i] = 1;
         }
 
         return false;

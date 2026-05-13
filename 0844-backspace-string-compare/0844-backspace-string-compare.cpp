@@ -1,49 +1,51 @@
 class Solution {
 public:
+    int getNextValidCharIndex(string &str, int index)
+    {
+        int skip = 0;
+
+        while(index >= 0)
+        {
+            if(str[index] == '#')
+            {
+                skip++;
+                index--;
+            }
+            else if(skip > 0)
+            {
+                skip--;
+                index--;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        return index;
+    }
+
     bool backspaceCompare(string s, string t) {
-        
-        stack<char> sq;
-        stack<char> tq;
 
-        for(char c : s)
+        int i = s.size() - 1;
+        int j = t.size() - 1;
+
+        while(i >= 0 || j >= 0)
         {
-            if(c == '#')
-            {
-                if(!sq.empty())
-                    sq.pop();
-            }
-            else
-            {
-                sq.push(c);
-            }
-        }
+            i = getNextValidCharIndex(s, i);
+            j = getNextValidCharIndex(t, j);
 
-        for(char c : t)
-        {
-            if(c == '#')
-            {
-                if(!tq.empty())
-                    tq.pop();
-            }
-            else
-            {
-                tq.push(c);
-            }
+            if(i < 0 && j < 0)
+                return true;
 
-            cout << tq.size() << endl;
-        }
+            if(i < 0 || j < 0)
+                return false;
 
-        if(sq.size() != tq.size()) return false;
+            if(s[i] != t[j])
+                return false;
 
-        while(!sq.empty())
-        {
-            char sc = sq.top();
-            char tc = tq.top();
-
-            if(sc != tc) return false;
-
-            sq.pop();
-            tq.pop();
+            i--;
+            j--;
         }
 
         return true;

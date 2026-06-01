@@ -25,4 +25,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0191-number-of-1-bits](https://github.com/Jaero0/leetcode/tree/master/0191-number-of-1-bits) |
+## Array
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/Jaero0/leetcode/tree/master/0014-longest-common-prefix) |
+## String
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/Jaero0/leetcode/tree/master/0014-longest-common-prefix) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/Jaero0/leetcode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->

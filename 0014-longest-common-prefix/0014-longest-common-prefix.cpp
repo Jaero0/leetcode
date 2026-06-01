@@ -2,38 +2,29 @@ class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) 
     {
-        string st;
-        int min = 201;
+        string shortest = strs[0];
 
-        for(const string &s : strs)
+        for (const string& s : strs) 
         {
-            if(min > s.size())
+            if (s.size() < shortest.size()) 
             {
-                min = s.size();
-                st = s;
+                shortest = s;
             }
         }
 
-        string ans;
+        int i = 0;
 
-        for(int i = 0; i < min; i++)
+        for (; i < shortest.size(); i++) 
         {
-            bool isSame = true;
-
-            for(const string &s : strs)
+            for (const string& s : strs) 
             {
-                if(s == st) continue;
-
-                if(s[i] != st[i])
+                if (s[i] != shortest[i]) 
                 {
-                    isSame = false;
-                    break;
+                    return shortest.substr(0, i);
                 }
             }
-
-            if(!isSame) break;
-            ans += st[i];
         }
-        return ans;
+
+        return shortest;
     }
 };

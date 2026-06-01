@@ -5,7 +5,7 @@ public:
         string st;
         int min = 201;
 
-        for(string s : strs)
+        for(const string &s : strs)
         {
             if(min > s.size())
             {
@@ -20,7 +20,7 @@ public:
         {
             bool isSame = true;
 
-            for(string s : strs)
+            for(const string &s : strs)
             {
                 if(s == st) continue;
 
@@ -31,16 +31,8 @@ public:
                 }
             }
 
-            if(isSame)
-            {
-                ans += st[i];
-            }
-            else
-            {
-                if(ans.size() > 0) break;
-                
-                return "";
-            }
+            if(!isSame) break;
+            ans += st[i];
         }
         return ans;
     }

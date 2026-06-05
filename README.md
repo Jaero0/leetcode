@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0014-longest-common-prefix](https://github.com/Jaero0/leetcode/tree/master/0014-longest-common-prefix) |
 | [0136-single-number](https://github.com/Jaero0/leetcode/tree/master/0136-single-number) |
+| [0283-move-zeroes](https://github.com/Jaero0/leetcode/tree/master/0283-move-zeroes) |
 ## String
 |  |
 | ------- |
@@ -47,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/Jaero0/leetcode/tree/master/0234-palindrome-linked-list) |
+| [0283-move-zeroes](https://github.com/Jaero0/leetcode/tree/master/0283-move-zeroes) |
 ## Stack
 |  |
 | ------- |

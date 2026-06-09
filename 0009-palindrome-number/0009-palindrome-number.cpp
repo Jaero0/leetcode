@@ -3,23 +3,16 @@ public:
     bool isPalindrome(int x) 
     {
         if(x < 0) return false;
+        if(x % 10 == 0 && x != 0) return false;
 
-        deque<int> v;
-        while(x > 0)
+        int reverse = 0;
+
+        while(x > reverse)
         {
-            v.push_back(x % 10);
+            reverse = reverse * 10 + x % 10;
             x /= 10;
         }
 
-        int size = v.size();
-        for(int i = 0; i <= size / 2 - 1; i++)
-        {
-            if(v.front() != v.back()) return false;
-
-            v.pop_front();
-            v.pop_back();
-        }
-
-        return true;
+        return reverse == x || reverse / 10 == x;
     }
 };

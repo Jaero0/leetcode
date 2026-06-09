@@ -30,11 +30,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0136-single-number](https://github.com/Jaero0/leetcode/tree/master/0136-single-number) |
 | [0191-number-of-1-bits](https://github.com/Jaero0/leetcode/tree/master/0191-number-of-1-bits) |
+| [0268-missing-number](https://github.com/Jaero0/leetcode/tree/master/0268-missing-number) |
 ## Array
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/Jaero0/leetcode/tree/master/0014-longest-common-prefix) |
 | [0136-single-number](https://github.com/Jaero0/leetcode/tree/master/0136-single-number) |
+| [0268-missing-number](https://github.com/Jaero0/leetcode/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/Jaero0/leetcode/tree/master/0283-move-zeroes) |
 ## String
 |  |
@@ -61,4 +63,20 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/Jaero0/leetcode/tree/master/0234-palindrome-linked-list) |
+## Hash Table
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/Jaero0/leetcode/tree/master/0268-missing-number) |
+## Math
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/Jaero0/leetcode/tree/master/0268-missing-number) |
+## Binary Search
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/Jaero0/leetcode/tree/master/0268-missing-number) |
+## Sorting
+|  |
+| ------- |
+| [0268-missing-number](https://github.com/Jaero0/leetcode/tree/master/0268-missing-number) |
 <!---LeetCode Topics End-->

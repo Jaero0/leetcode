@@ -4,7 +4,7 @@ public:
     {
         if(x < 0) return false;
 
-        vector<int> v;
+        deque<int> v;
         while(x > 0)
         {
             v.push_back(x % 10);
@@ -14,7 +14,10 @@ public:
         int size = v.size();
         for(int i = 0; i <= size / 2 - 1; i++)
         {
-            if(v[i] != v[size - 1 - i]) return false;
+            if(v.front() != v.back()) return false;
+
+            v.pop_front();
+            v.pop_back();
         }
 
         return true;

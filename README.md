@@ -42,6 +42,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/Jaero0/leetcode/tree/master/0014-longest-common-prefix) |
+| [1768-merge-strings-alternately](https://github.com/Jaero0/leetcode/tree/master/1768-merge-strings-alternately) |
 ## Trie
 |  |
 | ------- |
@@ -55,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/Jaero0/leetcode/tree/master/0234-palindrome-linked-list) |
 | [0283-move-zeroes](https://github.com/Jaero0/leetcode/tree/master/0283-move-zeroes) |
+| [1768-merge-strings-alternately](https://github.com/Jaero0/leetcode/tree/master/1768-merge-strings-alternately) |
 ## Stack
 |  |
 | ------- |
